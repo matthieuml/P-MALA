@@ -1,0 +1,19 @@
+[project]
+authors = [{name = "matthieuml", email = "merigotmatthieu@gmail.com"}]
+name = "P-MALA"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = [ "numpy>=2.2.3,<3", "matplotlib>=3.10.1,<4", "ipykernel>=6.29.5,<7", "scipy>=1.15.2,<2", "opencv-python>=4.11.0.86,<5", "scikit-image>=0.25.2,<0.26", "prox-tv>=3.2.1,<4", "tqdm>=4.67.1,<5"]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+p_mala = { path = ".", editable = true }
+
+[tool.pixi.tasks]
